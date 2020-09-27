@@ -1,0 +1,38 @@
+main {
+  &.container {
+    margin-bottom: 80px;
+  }
+}
+
+.first-round {
+  .list-item {
+    border-radius: Rem($border-radius) Rem($border-radius) 0 0;
+  }
+}
+
+.last-round {
+  .list-item {
+    border-radius: 0 0 Rem($border-radius) Rem($border-radius);
+    padding-bottom: 16px;
+    &-divider {
+      display: none;
+    }
+  }
+}
+
+.mt-2 {
+  margin-top: 2rem;
+}
+
+.item-link {
+  text-decoration: none;
+  color: var(--text-color);
+  &:visited {
+    color: var(--text-color);
+    .list-item-divider {
+      border-top: 1px solid $background;
+      color: $background;
+    }
+  }
+}
+

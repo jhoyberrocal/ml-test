@@ -1,0 +1,32 @@
+:root {
+  --background: #{$background};
+  --font-size: #{$font-size};
+  --text-color: #{$text};
+  --gray-color: #{$gray};
+  --sub-text: #{$sub-text};
+  --accent-color: #{$blue};
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  &:focus {
+    outline: none;
+  }
+}
+
+html {
+  font-size: var(--font-size);
+}
+
+body {
+  background: var(--background);
+  color: var(--text-color);
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

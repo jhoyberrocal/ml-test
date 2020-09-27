@@ -1,0 +1,20 @@
+@import "./../../scss/variables";
+
+.breadcrumbs {
+  list-style: none;
+  padding: Rem(16px) 0;
+  display: flex;
+  li {
+    font-size: Rem(14px);
+    color: var(--gray-color);
+    i {
+      padding: 0 5px;
+    }
+    &:last-child {
+      font-weight: bold;
+      i {
+        display: none;
+      }
+    }
+  }
+}

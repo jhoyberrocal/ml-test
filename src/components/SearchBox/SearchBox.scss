@@ -1,0 +1,37 @@
+@import "./../../scss/variables";
+
+.header {
+  width: 100%;
+  position: sticky;
+  background: $yellow;
+  padding: Rem(8px) 0;
+}
+
+.search-box {
+  width: 100%;
+  display: grid;
+  grid-template-columns: max-content auto;
+  align-items: center;
+  &-input {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto max-content;
+    align-items: center;
+    padding-left: Rem(20px);
+    &_btn, &_box {
+      border: none;
+      height: 38px;
+      padding: Rem(10px) Rem(15px);
+    }
+    &_btn {
+      border-radius: 0 Rem($border-radius) Rem($border-radius) 0;
+      cursor: pointer;
+      color: var(--gray-color);
+    }
+    &_box {
+      border-radius: Rem($border-radius) 0 0 Rem($border-radius);
+      font-size: Rem(18px);
+      font-weight: 400;
+    }
+  }
+}

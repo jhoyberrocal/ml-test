@@ -1,0 +1,110 @@
+
+.container-fluid {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.container {
+  width: calc(100% - 2rem);
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@each $size in $sizes {
+  @media only screen and( min-width: #{$size}) {
+    .container {
+      max-width: ($size * 95)/100;
+      padding-left: 2rem;
+      padding-right: 2rem;
+    }
+  }
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 0 1 auto;
+  margin-left: -$gutter;
+  margin-right: -$gutter;
+}
+
+.col {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  padding-left: $gutter;
+  padding-right: $gutter;
+
+  @for $i from 1 through $columnas {
+    $col-W: ($columna-width) * $i;
+    &.s#{$i} {
+      flex-basis: unquote($col-W+'%');
+      max-width: unquote($col-W+'%');
+    }
+    &.off-s#{$i} {
+      margin-left: unquote($col-W+'%');
+    }
+  }
+}
+
+@media only screen and (min-width: $sm-size){
+  .col {
+    @for $i from 1 through $columnas {
+      $col-W: ($columna-width) * $i;
+      &.sm#{$i} {
+        flex-basis: unquote($col-W+'%');
+        max-width: unquote($col-W+'%');
+      }
+      &.off-sm#{$i} {
+        margin-left: unquote($col-W+'%');
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $md-size){
+  .col {
+    @for $i from 1 through $columnas {
+      $col-W: ($columna-width) * $i;
+      &.md#{$i} {
+        flex-basis: unquote($col-W+'%');
+        max-width: unquote($col-W+'%');
+      }
+      &.off-md#{$i} {
+        margin-left: unquote($col-W+'%');
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $lg-size){
+  .col {
+    @for $i from 1 through $columnas {
+      $col-W: ($columna-width) * $i;
+      &.lg#{$i} {
+        flex-basis: unquote($col-W+'%');
+        max-width: unquote($col-W+'%');
+      }
+      &.off-lg#{$i} {
+        margin-left: unquote($col-W+'%');
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: $xl-size){
+  .col {
+    @for $i from 1 through $columnas {
+      $col-W: ($columna-width) * $i;
+      &.xl#{$i} {
+        flex-basis: unquote($col-W+'%');
+        max-width: unquote($col-W+'%');
+      }
+      &.off-xl#{$i} {
+        margin-left: unquote($col-W+'%');
+      }
+    }
+  }
+}

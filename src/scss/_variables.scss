@@ -1,0 +1,20 @@
+$font-size: 16px;
+$background: #EEEEEE;
+$yellow: #FFE600;
+$blue: #3483FA;
+$gray: #999999;
+$sub-text: #666666;
+$text: #333333;
+
+$columnas: 12;
+$gutter: 1rem;
+$columna-width: 100 / $columnas;
+$sm-size: 576px;
+$md-size: 720px;
+$lg-size: 992px;
+$xl-size: 1140px;
+
+$sizes: $sm-size, $md-size, $lg-size, $xl-size;
+$border-radius: 4px;
+
+@import "helpers";
